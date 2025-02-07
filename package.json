@@ -7,10 +7,12 @@
   "scripts": {
     "watch:client": "node esbuild-config/client.dev.mjs",
     "watch:server": "node esbuild-config/server.dev.mjs",
-    "watch:restart-server": "nodemon --config nodemon.json",
-    "dev": "yarn watch:client & yarn watch:server & yarn watch:restart-server",
+    "watch:restart-server": "npx nodemon --config nodemon.json",
+    "watch:css": "yarn build:css --watch",
+    "dev": "yarn watch:client & yarn watch:server & yarn watch:css & yarn watch:restart-server ",
     "build:client": "node esbuild-config/client.prod.mjs",
     "build:server": "node esbuild-config/server.prod.mjs",
+    "build:css": "yarn tailwindcss -i ./src/client/globals.css -o ./public/static/app.css --minify",
     "build": "yarn build:client && yarn build:server",
     "start": "node dist/server.js",
     "lint": "eslint '{client, esbuild-config}/**/*.{ts,tsx}'",
@@ -25,10 +27,18 @@
     "boilerplate"
   ],
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tailwindcss/cli": "^4.0.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "lucide-react": "^0.474.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.3",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/cors": "^2",

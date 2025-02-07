@@ -7,3 +7,9 @@
 - Node / Express
 - Eslint
 - Prettier
+
+Style
+- tailwind
+
+Component
+- Shadcn

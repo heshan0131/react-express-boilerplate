@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Button} from '@/components/ui/button';
 
 interface AppProps {}
 
@@ -14,7 +15,8 @@ const App = (props: AppProps) => {
 
   return (
     <div className="mx-auto mt-5 w-25">
-      <div className="alert alert-info text-center">Hello {data}</div>
+      <h1 className="text-3xl font-bold">Hello {data}</h1>
+      <Button variant="outline">Button</Button>
     </div>
   );
 };
