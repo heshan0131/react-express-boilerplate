@@ -9,7 +9,30 @@
 - Prettier
 
 Style
+
 - tailwind
 
 Component
+
 - Shadcn
+
+# How to run
+
+## Install
+
+```sh
+yarn
+yarn build
+```
+
+## Start Server
+
+```sh
+yarn start
+```
+
+## Start Cient
+
+```sh
+
+```
